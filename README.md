@@ -24,7 +24,8 @@ Heart disease remains the leading cause of death globally. World Health Organiza
 
 ## Architecture
 
-![image](https://github.com/manisankar29/heart_disease_detection_using_machine_learning/assets/138246745/1dd38b9e-66ba-44c3-951b-4e2abeee73ad)
+![Image](https://github.com/manisankar29/heart_disease_detection_using_machine_learning/assets/138246745/88403914-41f4-4dcf-8fb6-3197c6d34892)
+
 
 - Creating an architecture diagram for a heart disease detection project involves illustrating the key components, their interactions, and the flow of data within the system.
 
