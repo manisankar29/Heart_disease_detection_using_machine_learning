@@ -33,3 +33,8 @@ Heart disease remains the leading cause of death globally. World Health Organiza
 - The core components include data acquistion, preprocessing, modeling, training, testing, and predicting.
 
 - At the base of the architecture, data acquistion modules gather heart disease data from various sources, such as ECG and historical records.
+
+## Algorithms
+
+- Logistic Regression:
+  
