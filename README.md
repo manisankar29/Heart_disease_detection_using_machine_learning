@@ -3,6 +3,8 @@
 ## Table of contents
 
 - [Introduction](#introduction)
+- [Architecture](#architecture)
+- [Algorithms](#algorithms)
 - [Prerequisites](#prerequisites)
 - [Getting Started](#getting-started)
 - [Code Explanation](#code-explanation)
