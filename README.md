@@ -14,4 +14,8 @@
 
 Heart disease remains the leading cause of death globally. World Health Organization (WHO) has estimated 12 million deaths occur worldwide, every year due to heart diseases. Half the deaths in the United States and other developed countries are due to cardio vascular diseases. Thus preventing heart diseases has become more than necessary. The implementation of data-driven systems for predicting heart diseases is crucial to advancing research and prevention efforts, ultimately promoting healthier lives for a larger population. 
  
-  In this context, the application of machine learning emerges as a crucial tool. Machine learning plays a vital role in accurately predicting heart diseases.
+  In this context, the application of machine learning emerges as a crucial tool. Machine learning plays a vital role in accurately predicting heart diseases. 
+
+  The project involved a analysis of a dataset containing heart disease patient information, including data processing techniques. Following, various models were trained using diverse algorithms, including Logistic Regression, SVM (Support Vector Machine), KNN (K-Nearest Neighbors), Decision Tree, Random Forest, XGBoost, and Neural Netowrks. Lastly, trained model was deployed into the GUI (Graphical User Interface) platform for better communication between users.
+
+  This project intends to predict whether the heart disease detection is present or not.
