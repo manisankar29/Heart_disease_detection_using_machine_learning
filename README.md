@@ -21,3 +21,15 @@ Heart disease remains the leading cause of death globally. World Health Organiza
   The project involved a analysis of a dataset containing heart disease patient information, including data processing techniques. Following, various models were trained using diverse algorithms, including Logistic Regression, SVM (Support Vector Machine), KNN (K-Nearest Neighbors), Decision Tree, Random Forest, XGBoost, and Neural Netowrks. Lastly, trained model was deployed into the GUI (Graphical User Interface) platform for better communication between users.
 
   This project intends to predict whether the heart disease detection is present or not.
+
+## Architecture
+
+![image](https://github.com/manisankar29/heart_disease_detection_using_machine_learning/assets/138246745/1dd38b9e-66ba-44c3-951b-4e2abeee73ad)
+
+- Creating an architecture diagram for a heart disease detection project involves illustrating the key components, their interactions, and the flow of data within the system.
+
+- The heart disease detection system is designed with a modular and scalable architecture to efficiently handle the complexity of detecting heart disease.
+
+- The core components include data acquistion, preprocessing, modeling, training, testing, and predicting.
+
+- At the base of the architecture, data acquistion modules gather heart disease data from various sources, such as ECG and historical records.
