@@ -37,5 +37,8 @@ Heart disease remains the leading cause of death globally. World Health Organiza
 
 ## Algorithms
 
-- Logistic Regression:
+1. Logistic Regression:
+
+   - A probabilistic algoithm used for binary classification problems.
   
+   - 
