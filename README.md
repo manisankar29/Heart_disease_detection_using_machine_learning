@@ -41,4 +41,6 @@ Heart disease remains the leading cause of death globally. World Health Organiza
 
    - A probabilistic algoithm used for binary classification problems.
   
+   - Works well for binary classification problems, is relatively simple and easy to interpret.
+  
    - 
