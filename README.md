@@ -43,4 +43,14 @@ Heart disease remains the leading cause of death globally. World Health Organiza
   
    - Works well for binary classification problems, is relatively simple and easy to interpret.
   
-   - 
+   - However, it may not work well for datasets with high dimensionality.
+
+2. SVM:
+
+   - A linear or non-linear model used for binary classification, regression, and even outlier detection.
+  
+   - Work well for both binary and multi-class classification problems, is also relatively simple and easy to interpret.
+  
+   - However, it may not work well for datasets with high dimensionality or complex non-linear patterns.
+
+3. KNN:
