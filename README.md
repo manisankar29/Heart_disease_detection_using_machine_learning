@@ -54,3 +54,21 @@ Heart disease remains the leading cause of death globally. World Health Organiza
    - However, it may not work well for datasets with high dimensionality or complex non-linear patterns.
 
 3. KNN:
+
+   - A non-parametric, lazy learning algorithm used for binary classification, regression, and even pattern recognition.
+  
+4. Decision Tree:
+
+   - A flowchart-like model used for classification and regression.
+
+5. Random Forest:
+
+   - An ensemble method that uses multiple decision trees for better performance.
+
+6. XGBoost:
+
+   - A gradient boosting library designed for speed and performance.
+  
+7. Neural Networks:
+
+   - A collection of slgorithms that can be used for a variety of tasks, including pattern recognition, time series prediction, and optimization.
