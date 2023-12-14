@@ -97,6 +97,21 @@ Heart disease remains the leading cause of death globally. World Health Organiza
 
 ## Features
 
+The model considers multiple features related to an individual's health, such as:
+
+- Age
+- Sex
+- Cerebral Palsy (CP)
+- Resting blood pressure
+- Cholesterol
+- Fasting blood sugar
+- Resting ECG
+- Thalach (Maximum heart rate achieved)
+- Exang (Excercise induced angina)
+- Oldpeak
+- Slope
+- Cardiac arrest
+- Thalassemia
 
 ## Prerequisites
 
