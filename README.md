@@ -95,3 +95,6 @@ Heart disease remains the leading cause of death globally. World Health Organiza
 
 ## Prerequisites
 
+Before using this code, ensure that you have the following prerequisites:
+
+- Python: The script is written in python and requires a python environment.
