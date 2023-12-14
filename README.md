@@ -5,6 +5,8 @@
 - [Introduction](#introduction)
 - [Architecture](#architecture)
 - [Algorithms](#algorithms)
+- [Features](#features)
+- [Dataset](#dataset)
 - [Prerequisites](#prerequisites)
 - [Getting Started](#getting-started)
 - [Code Explanation](#code-explanation)
