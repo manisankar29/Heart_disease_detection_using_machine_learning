@@ -37,7 +37,7 @@ Heart disease remains the leading cause of death globally. World Health Organiza
 
 ## Algorithms
 
-1. Logistic Regression:
+**1. Logistic Regression**:
 
    - A probabilistic algoithm used for binary classification problems.
   
@@ -45,7 +45,7 @@ Heart disease remains the leading cause of death globally. World Health Organiza
   
    - However, it may not work well for datasets with high dimensionality.
 
-2. SVM:
+**2. SVM**:
 
    - A linear or non-linear model used for binary classification, regression, and even outlier detection.
   
@@ -53,7 +53,7 @@ Heart disease remains the leading cause of death globally. World Health Organiza
   
    - However, it may not work well for datasets with high dimensionality or complex non-linear patterns.
 
-3. KNN:
+**3. KNN**:
 
    - A non-parametric, lazy learning algorithm used for binary classification, regression, and even pattern recognition.
   
@@ -61,7 +61,7 @@ Heart disease remains the leading cause of death globally. World Health Organiza
   
    - However, it may be slow for large datasets, as it involves computing the distance between each instance and every other instance.
   
-4. Decision Tree:
+**4. Decision Tree**:
 
    - A flowchart-like model used for classification and regression.
   
@@ -69,7 +69,7 @@ Heart disease remains the leading cause of death globally. World Health Organiza
   
    - However, it may overfit the training data, resulting in poor generalization to new data.
 
-5. Random Forest:
+**5. Random Forest**:
 
    - An ensemble method that uses multiple decision trees for better performance.
   
@@ -77,7 +77,7 @@ Heart disease remains the leading cause of death globally. World Health Organiza
   
    - However, it may still overfit the training data.
 
-6. XGBoost:
+**6. XGBoost**:
 
    - A gradient boosting library designed for speed and performance.
   
@@ -85,7 +85,7 @@ Heart disease remains the leading cause of death globally. World Health Organiza
   
    - However, it may still overfit the training data.
   
-7. Neural Networks:
+**7. Neural Networks**:
 
    - A collection of slgorithms that can be used for a variety of tasks, including pattern recognition, time series prediction, and optimization.
   
@@ -97,4 +97,4 @@ Heart disease remains the leading cause of death globally. World Health Organiza
 
 Before using this code, ensure that you have the following prerequisites:
 
-- Python: The script is written in python and requires a python environment.
+- **Python**: The script is written in python and requires a python environment.
