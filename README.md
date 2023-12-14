@@ -113,6 +113,12 @@ The model considers multiple features related to an individual's health, such as
 - Cardiac arrest
 - Thalassemia
 
+## Dataset
+
+The dataset, obtained from Kaggle, includes records with associated features and labels indicating the presence or absence of heart disease.
+
+
+
 ## Prerequisites
 
 Before using this code, ensure that you have the following prerequisites:
