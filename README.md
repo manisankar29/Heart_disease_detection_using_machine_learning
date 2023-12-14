@@ -92,3 +92,6 @@ Heart disease remains the leading cause of death globally. World Health Organiza
    - Works well for pattern recognition and optimization problems. They can handle high dimensionality and complex non-linear patterns.
   
    - However, they may require a large amount of training data, can be computationality expensive, and may have difficulty providing an interpretable model.
+
+## Prerequisites
+
