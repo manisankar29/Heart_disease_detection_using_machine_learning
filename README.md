@@ -128,4 +128,3 @@ Before using this code, ensure that you have the following prerequisites:
 - **Joblib**: It can be used to save and load machine learning models.
 
 ## Getting Started
-
