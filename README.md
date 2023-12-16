@@ -123,7 +123,10 @@ Before using this code, ensure that you have the following prerequisites:
 
 - **Python**: The script is written in python and requires a python environment.
 - **Scikit-learn**: It is a free open source machine learning library for python.
+- **Keras**: 
 - **Joblib**: It can be used to save and load machine learning models.
+- **Ipywidgets**:
+- **IPython**:
 
 ## Getting Started
 
