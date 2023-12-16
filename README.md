@@ -1,4 +1,4 @@
-# heart_disease_detection
+# HEART DISEASE DETECTION USING MACHINE LEARNING
 
 ## Table of contents
 
