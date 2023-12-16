@@ -117,8 +117,6 @@ The model considers multiple features related to an individual's health, such as
 
 The dataset, obtained from Kaggle, includes records with associated features and labels indicating the presence or absence of heart disease.
 
-
-
 ## Prerequisites
 
 Before using this code, ensure that you have the following prerequisites:
@@ -128,3 +126,8 @@ Before using this code, ensure that you have the following prerequisites:
 - **Joblib**: It can be used to save and load machine learning models.
 
 ## Getting Started
+
+1. Clone this repository or crreate a new python script.
+2. Place your dataset in the same directory as the script.
+3. Train and test the machine learning model.
+4. Deploy the trained model in Graphical User Interface (GUI).
