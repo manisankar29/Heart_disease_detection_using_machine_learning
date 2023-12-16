@@ -131,3 +131,5 @@ Before using this code, ensure that you have the following prerequisites:
 2. Place your dataset in the same directory as the script.
 3. Train and test the machine learning model.
 4. Deploy the trained model in Graphical User Interface (GUI).
+
+## Code Explanation
