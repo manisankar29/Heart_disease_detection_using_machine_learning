@@ -123,10 +123,10 @@ Before using this code, ensure that you have the following prerequisites:
 
 - **Python**: The script is written in python and requires a python environment.
 - **Scikit-learn**: It is a free open source machine learning library for python.
-- **Keras**: 
+- **Keras**: It is a deep learning API developed by Google for implementing neural networks.
 - **Joblib**: It can be used to save and load machine learning models.
-- **Ipywidgets**:
-- **IPython**:
+- **Ipywidgets**: These are interactive HTML widgets for Jupyter notebooks and the IPython kernel.
+- **IPython**: It is an enhanced interactive environment for Python with many functionalities compared to the standard Python shell.
 
 ## Getting Started
 
