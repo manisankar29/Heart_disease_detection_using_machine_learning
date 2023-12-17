@@ -136,3 +136,22 @@ Before using this code, ensure that you have the following prerequisites:
 4. Deploy the trained model in Graphical User Interface (GUI).
 
 ## Code Explanation
+
+The code is divided into the following sections:
+
+### I. Importing required libraries
+
+- The code begins by importing necessary libraries, including `Numpy`, `Pandas`, `Matplotlib`, `Seaborn`, and `OS`.
+- `%matplotlib inline` is a magic command for Jupyter Notebooks to display plots inline.
+
+```bash
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+import os
+import warnings
+%matplotlib inline
+print(os.listdir())
+warnings.filterwarnings('ignore')
+```
