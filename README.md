@@ -155,3 +155,76 @@ import warnings
 print(os.listdir())
 warnings.filterwarnings('ignore')
 ```
+### II. Importing and understanding the dataset
+
+- The dataset (`heart.csv`) is loaded using pandas.
+  
+ ```bash
+data = pd.read_csv("/content/heart.csv")
+```
+
+- Basic exploration of the dataset is performed, including checking its shape, displaying the first rows, generating descriptive statistics, and obtaining information on data types.
+  
+```bash
+data.shape
+data.head(5)
+data.describe()
+data.info()
+```
+- Information about each column is provided based on the dataset, explaining the meaning of each feature.
+
+```bash
+info = ["age",
+        "1: male, 0: female",
+        "chest pain type, 1: typical angina, 2: atypical angina, 3: non-anginal pain, 4: asymptomatic",
+        "resting blood pressure",
+        "serum cholestoral in mg/dl",
+        "fasting blood sugar > 120 mg/dl",
+        "resting ECG values(0,1,2)",
+        "max heartrate achieved",
+        "exercise induced angina",
+        "oldpeak = ST depression induced by exercise relative to rest",
+        "the slope of the peak exercise ST segment",
+        "no. of major vessels (0-3) colored by flourosopy",
+        "thal: 3 = normal, 6 = fixed defect, 7 = revrsable defect"]
+for i in range(len(info)):
+  print(data.columns[i]+":\t\t"+info[i])
+```
+
+- Descriptive statistics and unique values of the target variable (`"target"`) are displayed.
+
+```bash
+data["target"].describe()
+data["target"].unique()
+```
+
+### III. Exploratory Data Analysis (EDA)
+
+- Percentage of the patients with and without heart problems are displayed by analyzing the target variable.
+
+```bash
+y = data["target"]
+target_temp = data.target.value_counts()
+print(target_temp)
+print("Percentage of patience without heart problems: "+str(round(target_temp[0]*100/303,2)))
+print("Percentage of patience with heart problems: "+str(round(target_temp[1]*100/303,2)))
+```
+
+### IV. Train test split
+
+- The dataset is split into training and testing sets using `train_test_split`.
+
+```bash
+  from sklearn.model_selection import train_test_split
+X = data.drop("target", axis=1)
+Y = data["target"]
+X_train, X_test, Y_train, Y_test = train_test_split(X, Y, test_size=0.20, random_state=0)
+```
+
+### V. Model fitting
+
+- Imported `accuracy_score` from `Scikit-learn` library to get various models performance in the means of accuracy.
+
+```bash
+from sklearn.metrics import accuracy_score
+```
