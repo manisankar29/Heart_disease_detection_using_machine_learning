@@ -228,3 +228,7 @@ X_train, X_test, Y_train, Y_test = train_test_split(X, Y, test_size=0.20, random
 ```bash
 from sklearn.metrics import accuracy_score
 ```
+
+- Various machine learning models are trained and evaluated for classification using accuracy scores.
+
+#### [Logistic Regression](#logistic-regression)
