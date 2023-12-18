@@ -215,7 +215,7 @@ print("Percentage of patience with heart problems: "+str(round(target_temp[1]*10
 - The dataset is split into training and testing sets using `train_test_split`.
 
 ```bash
-  from sklearn.model_selection import train_test_split
+from sklearn.model_selection import train_test_split
 X = data.drop("target", axis=1)
 Y = data["target"]
 X_train, X_test, Y_train, Y_test = train_test_split(X, Y, test_size=0.20, random_state=0)
