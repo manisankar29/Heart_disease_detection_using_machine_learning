@@ -115,7 +115,7 @@ The model considers multiple features related to an individual's health, such as
 
 ## Dataset
 
-The dataset, obtained from Kaggle, includes records with associated features and labels indicating the presence or absence of heart disease.
+The dataset, obtained from Kaggle, includes records with associated [features](#features) and labels indicating the presence or absence of heart disease.
 
 ## Prerequisites
 
