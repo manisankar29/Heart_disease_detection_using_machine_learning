@@ -130,7 +130,7 @@ Before using this code, ensure that you have the following prerequisites:
 
 ## Getting Started
 
-1. Clone this repository or crreate a new python script.
+1. Clone this repository or create a new python script.
 2. Place your dataset in the same directory as the script.
 3. Train and test the machine learning model.
 4. Deploy the trained model in Graphical User Interface (GUI).
