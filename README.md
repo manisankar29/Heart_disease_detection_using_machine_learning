@@ -231,4 +231,4 @@ from sklearn.metrics import accuracy_score
 
 - Various machine learning models are trained and evaluated for classification using accuracy scores.
 
-#### [Logistic Regression](#logistic-regression)
+<p align="center"><b>Logistic Regression</b></p>
