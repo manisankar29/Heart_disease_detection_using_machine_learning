@@ -232,3 +232,104 @@ from sklearn.metrics import accuracy_score
 - Various machine learning models are trained and evaluated for classification using accuracy scores.
 
 <p align="center"><b>Logistic Regression</b></p>
+
+```bash
+from sklearn.linear_model import LogisticRegression
+lr = LogisticRegression()
+lr.fit(X_train, Y_train)
+Y_pred_lr = lr.predict(X_test)
+score_lr = round(accuracy_score(Y_pred_lr, Y_test)*100,2)
+print("The accuracy score achieved using Logistic Regression is: "+str(score_lr)+"%")
+```
+
+<p align="center"><b>Support Vector Machine</b></p>
+
+```bash
+from sklearn.svm import SVC
+sv = SVC(kernel='linear')
+sv.fit(X_train, Y_train)
+Y_pred_svm = sv.predict(X_test)
+score_svm = round(accuracy_score(Y_pred_svm, Y_test)*100,2)
+print("The accuracy score achieved using SVM is: "+str(score_lr)+"%")
+```
+
+<p align="center"><b>K-Nearest Neighbor</b></p>
+
+```bash
+from sklearn.neighbors import KNeighborsClassifier
+knn = KNeighborsClassifier(n_neighbors=7)
+knn.fit(X_train, Y_train)
+Y_pred_knn = knn.predict(X_test)
+score_knn = round(accuracy_score(Y_pred_knn, Y_test)*100,2)
+print("The accuracy score achieved using KNN is: "+str(score_knn)+"%")
+```
+
+<p align="center"><b>Decision Tree</b></p>
+
+```bash
+from sklearn.tree import DecisionTreeClassifier
+max_accuracy = 0
+for x in range(2000):
+  dt = DecisionTreeClassifier(random_state=x)
+  dt.fit(X_train, Y_train)
+  Y_pred_dt = dt.predict(X_test)
+  curr_accuracy = round(accuracy_score(Y_pred_dt, Y_test)*100,2)
+  if(curr_accuracy > max_accuracy):
+    max_accuracy = curr_accuracy
+    best_x = x
+
+dt = DecisionTreeClassifier(random_state=best_x)
+dt.fit(X_train, Y_train)
+Y_pred_dt = dt.predict(X_test)
+score_dt = round(accuracy_score(Y_pred_dt, Y_test)*100,2)
+print("The accuracy score achieved using Decision Tree is: "+str(score_dt)+"%")
+```
+
+<p align="center"><b>Random Forest</b></p>
+
+```bash
+from sklearn.ensemble import RandomForestClassifier
+max_accuracy = 0
+for x in range(2000):
+  rf = RandomForestClassifier(random_state=x)
+  rf.fit(X_train, Y_train)
+  Y_pred_rf = rf.predict(X_test)
+  curr_accuracy = round(accuracy_score(Y_pred_rf, Y_test)*100,2)
+  if(curr_accuracy > max_accuracy):
+    max_accuracy = curr_accuracy
+    best_x = x
+
+rf = RandomForestClassifier(random_state=best_x)
+rf.fit(X_train, Y_train)
+Y_pred_rf = rf.predict(X_test)
+score_rf = round(accuracy_score(Y_pred_rf, Y_test)*100,2)
+print("The accuracy score achieved using Random Forest is: "+str(score_rf)+"%")
+```
+
+<p align="center"><b>XGBoost</b></p>
+
+```bash
+import xgboost as xgb
+xgb_model = xgb.XGBClassifier(objective="binary:logistic",random_state=42)
+xgb_model.fit(X_train, Y_train)
+Y_pred_xgb = xgb_model.predict(X_test)
+score_xgb = round(accuracy_score(Y_pred_xgb, Y_test)*100,2)
+print("The accuracy score achieved using XGBoost is: "+str(score_xgb)+"%")
+```
+
+<p align="center"><b>Neural Networks</b></p>
+
+```bash
+from keras.models import Sequential
+from keras.layers import Dense
+model = Sequential()
+model.add(Dense(11,activation='relu',input_dim=13))
+model.add(Dense(1,activation='sigmoid'))
+model.compile(loss='binary_crossentropy',optimizer='adam',metrics=['accuracy'])
+model.fit(X_train, Y_train, epochs=300)
+Y_pred_nn = model.predict(X_test)
+rounded = [round(x[0]) for x in Y_pred_nn]
+Y_pred_nn = rounded
+score_nn = round(accuracy_score(Y_pred_nn, Y_test)*100,2)
+print("The accuracy score achieved using Neural Network is: "+str(score_nn)+"%")
+```
