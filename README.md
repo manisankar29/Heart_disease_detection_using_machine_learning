@@ -333,3 +333,49 @@ Y_pred_nn = rounded
 score_nn = round(accuracy_score(Y_pred_nn, Y_test)*100,2)
 print("The accuracy score achieved using Neural Network is: "+str(score_nn)+"%")
 ```
+
+### VI. Output final score
+
+- Accuracy scores of different models are compared and visualized using scatter plot.
+
+```bash
+scores = [score_lr, score_svm, score_knn, score_dt, score_rf, score_xgb, score_nn]
+algorithms = ["Logistic Regression","SVM","KNN","Decision Tree","Random Forest","XGBoost","Neural Networks"]
+for i in range(len(algorithms)):
+  print("The accuracy score achieved using "+algorithms[i]+" is: "+str(scores[i])+"%")
+
+sns.set(rc={'figure.figsize':(10,4)})
+plt.xlabel("Algorithms")
+plt.ylabel("Accuracy score")
+plt.scatter(algorithms,scores)
+plt.show()
+```
+
+### VII. Prediction on new data
+
+- New data is taken for predicting whether disease is there or not.
+
+```bash
+new_data = pd.DataFrame({
+    'age':52,
+    'sex':1,
+    'cp':0,
+    'trestbps':125,
+    'chol':212,
+    'fbs':0,
+    'restecg':1,
+    'thalach':168,
+    'exang':0,
+    'oldpeak':1.0,
+     'slope':2,
+    'ca':2,
+    'thal':3,
+},index=[0])
+
+p = rf.predict(new_data)
+if p[0]==0:
+  print("No Disease")
+else:
+  print("Disease")
+```
+
