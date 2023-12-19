@@ -10,7 +10,7 @@
 - [Prerequisites](#prerequisites)
 - [Getting Started](#getting-started)
 - [Code Explanation](#code-explanation)
-- [Example Output](#example-output)
+- [Output](#output)
 - [Note](#note)
 - [License](#license)
 
@@ -440,3 +440,6 @@ display(age_input, sex_input, cp_input, trestbps_input, chol_input, fbs_input, r
         ca_input, thal_input)
 display(result_label)
 ```
+
+## Output
+
