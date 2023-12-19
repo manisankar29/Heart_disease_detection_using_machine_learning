@@ -443,3 +443,5 @@ display(result_label)
 
 ## Output
 
+- Accuracy scores achieved by all the trained models.
+
