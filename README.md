@@ -389,3 +389,54 @@ joblib.dump(rf, 'trained_model.joblib')
 from google.colab import files
 files.download('trained_model.joblib')
 ```
+
+### IX. Graphical User Interface (GUI)
+
+- Necessary packages are installed for creating an interactive widget.
+
+```bash
+!pip install ipywidgets
+!pip install Ipython
+import ipywidgets as widgets
+from IPython.display import display
+```
+
+- An interactive widget is created to take user inputs and provide real-time predictions using the trained model.
+
+```bash
+model = joblib.load('trained_model.joblib')
+
+def make_prediction(age, sex, cp, trestbps, chol, fbs, restecg, thalach, exang, oldpeak, slope, ca, thal):
+  input_data = [[age, sex, cp, trestbps, chol, fbs, restecg, thalach, exang, oldpeak, slope, ca, thal]]
+  prediction = model.predict(input_data)
+  if prediction[0] == 1:
+    result_label.value = "Heart Disease Detected"
+  else:
+    result_label.value = "Heart Disease Not Detected"
+
+age_input = widgets.FloatText(description='Age: ')
+sex_input = widgets.IntText(min=0, max=1, description='Sex: ')
+cp_input = widgets.IntText(min=1, max=4, description='Cerebral Palsy(CP): ')
+trestbps_input = widgets.FloatText(description='Resting Blood Pressure: ')
+chol_input = widgets.FloatText(description='Cholestrol: ')
+fbs_input = widgets.IntText(min=0, max=1, description='Fasting Blood SUgar: ')
+restecg_input = widgets.IntText(min=0, max=2, description='Resting ECG: ')
+thalach_input = widgets.FloatText(description='Max Heart Rate: ')
+exang_input = widgets.IntText(min=0, max=1, description='Exercise Induced Angina: ')
+oldpeak_input = widgets.FloatText(description='Oldpeak: ')
+slope_input = widgets.IntText(min=0, max=2, description='Slope: ')
+ca_input = widgets.IntText(min=0, max=3, description='Cardiac Arrest: ')
+thal_input = widgets.IntText(description='Thalassemia: ')
+
+result_label = widgets.Label(value="Prediction: ")
+widgets.interactive_output(
+    make_prediction,
+    {'age':age_input, 'sex': sex_input, 'cp': cp_input, 'trestbps': trestbps_input,
+     'chol': chol_input, 'fbs': fbs_input, 'restecg': restecg_input, 'thalach': thalach_input,
+     'exang': exang_input, 'oldpeak': oldpeak_input, 'slope': slope_input, 'ca': ca_input, 'thal': thal_input}
+)
+
+display(age_input, sex_input, cp_input, trestbps_input, chol_input, fbs_input, restecg_input, thalach_input, exang_input, oldpeak_input, slope_input,
+        ca_input, thal_input)
+display(result_label)
+```
