@@ -379,3 +379,13 @@ else:
   print("Disease")
 ```
 
+### VIII. Save model using Joblib
+
+- The Random Forest model with highest accuracy is saved using `joblib` and can be downloaded.
+
+```bash
+import joblib
+joblib.dump(rf, 'trained_model.joblib')
+from google.colab import files
+files.download('trained_model.joblib')
+```
