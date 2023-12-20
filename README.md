@@ -445,3 +445,4 @@ display(result_label)
 
 - Accuracy scores achieved by all the trained models.
 
+- Visualizing accuracy scores achieved by all the trained models using Scatterplot.
