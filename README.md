@@ -445,4 +445,6 @@ display(result_label)
 
 - Accuracy scores achieved by all the trained models.
 
+<img width="384" alt="output1" src="https://github.com/manisankar29/heart_disease_detection_using_machine_learning/assets/138246745/f3daa9bc-156f-4b36-8533-dfe2cf8bf4a6">
+
 - Visualizing accuracy scores achieved by all the trained models using Scatterplot.
