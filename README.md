@@ -453,3 +453,6 @@ display(result_label)
 
 - An interactive widget to take user inputs and provide real-time predictions using the trained model.
 
+<img width="306" alt="Screenshot 2023-12-15 095814" src="https://github.com/manisankar29/heart_disease_detection_using_machine_learning/assets/138246745/903e2310-8767-4005-8a83-6432b80687b7">
+
+![output3](https://github.com/manisankar29/heart_disease_detection_using_machine_learning/assets/138246745/903e2310-8767-4005-8a83-6432b80687b7)
