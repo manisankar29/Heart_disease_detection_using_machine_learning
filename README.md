@@ -450,3 +450,6 @@ display(result_label)
 - Visualizing accuracy scores achieved by all the trained models using Scatterplot.
 
 ![output2](https://github.com/manisankar29/heart_disease_detection_using_machine_learning/assets/138246745/b6674b6a-7c4b-403f-95d7-a5ba8470bb60)
+
+- An interactive widget to take user inputs and provide real-time predictions using the trained model.
+
