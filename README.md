@@ -448,3 +448,4 @@ display(result_label)
 ![Screenshot 2023-12-19 093817](https://github.com/manisankar29/heart_disease_detection_using_machine_learning/assets/138246745/c616e0dd-4eb4-49fe-93b2-84319b6d14af)
 
 - Visualizing accuracy scores achieved by all the trained models using Scatterplot.
+
