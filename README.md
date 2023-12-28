@@ -458,3 +458,5 @@ display(result_label)
 ## Note
 
 ## License
+
+[MIT License](LICENSE)
