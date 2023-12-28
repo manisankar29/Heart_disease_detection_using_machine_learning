@@ -457,6 +457,17 @@ display(result_label)
 
 ## Note
 
+- The accuracy of various models depends on the quality and quantity of the data. It may not be same accuracy in all cases.
+- Ensure that the CSV file paths are correctly specified in the code.
+
+Enjoy using the Heart Disease Detection script!
+
+If you encounter any issues or have questions, feel free to reach out for assistance.
+
+```bash
+You can include this README.md files in your project's repository, and it will serve as a guide for users who want to use the provided code.
+```
+
 ## License
 
 [MIT License](LICENSE)
