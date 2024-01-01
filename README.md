@@ -89,7 +89,7 @@ Heart disease remains the leading cause of death globally. World Health Organiza
   
 **7. Neural Networks:**
 
-   - A collection of slgorithms that can be used for a variety of tasks, including pattern recognition, time series prediction, and optimization.
+   - A collection of algorithms that can be used for a variety of tasks, including pattern recognition, time series prediction, and optimization.
   
    - Works well for pattern recognition and optimization problems. They can handle high dimensionality and complex non-linear patterns.
   
