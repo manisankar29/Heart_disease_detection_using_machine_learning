@@ -392,7 +392,7 @@ files.download('trained_model.joblib')
 
 ### IX. Graphical User Interface (GUI)
 
-- Necessary packages are installed for creating an interactive widget.
+- Necessary packages are installed and imported for creating an interactive widget.
 
 ```bash
 !pip install ipywidgets
