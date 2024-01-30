@@ -447,7 +447,7 @@ display(result_label)
 
 ![output1](https://github.com/manisankar29/heart_disease_detection_using_machine_learning/assets/138246745/c616e0dd-4eb4-49fe-93b2-84319b6d14af)
 
-- Visualizing accuracy scores achieved by all the trained models using Scatterplot.
+- Visualizing accuracy scores achieved by all the trained models using Barplot.
 
 ![output2](https://github.com/manisankar29/heart_disease_detection_using_machine_learning/assets/138246745/b6674b6a-7c4b-403f-95d7-a5ba8470bb60)
 
