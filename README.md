@@ -347,7 +347,7 @@ for i in range(len(algorithms)):
 sns.set(rc={'figure.figsize':(10,4)})
 plt.xlabel("Algorithms")
 plt.ylabel("Accuracy score")
-plt.scatter(algorithms,scores)
+sns.barplot(x=algorithms, y=scores)
 plt.show()
 ```
 
@@ -449,7 +449,7 @@ display(result_label)
 
 - Visualizing accuracy scores achieved by all the trained models using Barplot.
 
-![output2](https://github.com/manisankar29/heart_disease_detection_using_machine_learning/assets/138246745/b6674b6a-7c4b-403f-95d7-a5ba8470bb60)
+![output2](https://github.com/manisankar29/Heart_disease_detection_using_machine_learning/assets/138246745/e673d0e8-6698-4580-95e1-ab6071df03a8)
 
 - An interactive widget to take user inputs and provide real-time predictions using the trained model.
 
