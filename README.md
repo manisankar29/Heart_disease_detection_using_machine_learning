@@ -28,13 +28,7 @@ Heart disease remains the leading cause of death globally. World Health Organiza
 
 <img width="1000" alt="architecture" src="https://github.com/manisankar29/Heart_disease_detection_using_machine_learning/assets/138246745/f2b129a9-d285-4815-af7a-ed5a32ed2d80">
 
-- Creating an architecture diagram for a heart disease detection project involves illustrating the key components, their interactions, and the flow of data within the system.
 
-- The heart disease detection system is designed with a modular and scalable architecture to efficiently handle the complexity of detecting heart disease.
-
-- The core components include data acquistion, preprocessing, modeling, training, testing, and predicting.
-
-- At the base of the architecture, data acquistion modules gather heart disease data from various sources, such as ECG and historical records.
 
 ## Algorithms
 
