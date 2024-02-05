@@ -103,7 +103,7 @@ The model considers multiple features related to an individual's health, such as
 - Exang (Excercise induced angina)
 - Oldpeak
 - Slope
-- Cardiac arrest
+- Coronary artery
 - Thalassemia
 
 ## Dataset
