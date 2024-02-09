@@ -44,7 +44,7 @@ for i in range(len(info)):
 
 new_data = pd.DataFrame(features, index=[0])
 
-model = joblib.load("/workspaces/Heart_disease_detection_using_machine_learning/trained_model.joblib")
+model = joblib.load("/workspaces/Heart_disease_detection_using_machine_learning/trained_model.joblib", mmap_mode='r')
 prediction = model.predict(new_data)
 
 st.subheader("Prediction Result:")
