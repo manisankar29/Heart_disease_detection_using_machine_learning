@@ -28,7 +28,8 @@ Heart disease remains the leading cause of death globally. World Health Organiza
 
 <img width="1000" alt="architecture" src="https://github.com/manisankar29/Heart_disease_detection_using_machine_learning/assets/138246745/f2b129a9-d285-4815-af7a-ed5a32ed2d80">
 
-
+- Obtain the heart disease dataset from [Kaggle](https://www.kaggle.com/), which includes various features related to heart health.
+- 
 
 ## Algorithms
 
