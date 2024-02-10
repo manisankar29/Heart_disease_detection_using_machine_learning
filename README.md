@@ -28,8 +28,12 @@ Heart disease remains the leading cause of death globally. World Health Organiza
 
 <img width="1000" alt="architecture" src="https://github.com/manisankar29/Heart_disease_detection_using_machine_learning/assets/138246745/f2b129a9-d285-4815-af7a-ed5a32ed2d80">
 
-- Obtain the heart disease dataset from [Kaggle](https://www.kaggle.com/), which includes various features related to heart health.
-- 
+- Obtain the heart disease dataset from [Kaggle](https://www.kaggle.com/), which includes various [features](#features) related to heart health.
+- Preprocess the data by cleaning and transforming it into a format suitable for modeling.
+- Split the preprocessed data into training and testing sets.
+- Develop a machine learning model with various [algorithms](#algorithms) using the training dataset.
+- Validate the model's performance using the testing dataset.
+- Deploy the validated model in a real-world setting for predicting heart disease in new patients.
 
 ## Algorithms
 
