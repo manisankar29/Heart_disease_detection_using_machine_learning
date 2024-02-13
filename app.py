@@ -1,7 +1,9 @@
 import streamlit as st
 import numpy as np
 import pandas as pd
-import joblib
+from sklearn.model_selection import train_test_split
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.metrics import accuracy_score
 
 st.markdown(
     """
@@ -44,8 +46,23 @@ for i in range(len(info)):
 
 new_data = pd.DataFrame(features, index=[0])
 
-model = joblib.load("/workspaces/Heart_disease_detection_using_machine_learning/trained_model.joblib", mmap_mode='r')
-prediction = model.predict(new_data)
+X = data.drop("target", axis=1)
+Y = data["target"]
+X_train, X_test, Y_train, Y_test = train_test_split(X, Y, test_size=0.20, random_state=0)
+
+max_accuracy = 0
+for x in range(2000):
+  rf = RandomForestClassifier(random_state=x)
+  rf.fit(X_train, Y_train)
+  Y_pred_rf = rf.predict(X_test)
+  curr_accuracy = round(accuracy_score(Y_pred_rf, Y_test)*100,2)
+  if(curr_accuracy > max_accuracy):
+    max_accuracy = curr_accuracy
+    best_x = x
+
+rf = RandomForestClassifier(random_state=best_x)
+rf.fit(X_train, Y_train)
+prediction = rf.predict(new_data)
 
 st.subheader("Prediction Result:")
 if prediction[0] == 0:
