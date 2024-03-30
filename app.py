@@ -5,11 +5,7 @@ import joblib
 st.markdown(
     """
     <style>
-    body {
-        background-image: url('https://images.pexels.com/photos/887349/pexels-photo-887349.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2')
-        background-size: cover;
-        font-family: 'Times New Roman', Times, serif;
-    }
+    
     .copyright {
         text-align: center;
         margin-top: 2opx;
