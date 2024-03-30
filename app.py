@@ -1,4 +1,5 @@
 import streamlit as st
+import pandas as pd
 import joblib
 
 st.markdown(
@@ -19,6 +20,8 @@ st.markdown(
     """,
     unsafe_allow_html=True
 )
+
+data = pd.read_csv('heart.csv')
 
 info = ["Age", "Sex (1: male, 0: female)", "Chest Pain Type (1: typical angina, 2: atypical angina, 3: non-anginal pain, 4: asymptomatic)",
         "Resting Blood Pressure", "Serum Cholestoral (mg/dl)", "Fasting Blood Sugar (mg/dl)", "Resting ECG (0,1,2)",
