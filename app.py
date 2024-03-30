@@ -1,9 +1,5 @@
 import streamlit as st
-import numpy as np
-import pandas as pd
-from sklearn.model_selection import train_test_split
-from sklearn.ensemble import RandomForestClassifier
-from sklearn.metrics import accuracy_score
+import joblib
 
 st.markdown(
     """
@@ -23,8 +19,6 @@ st.markdown(
     """,
     unsafe_allow_html=True
 )
-
-data = pd.read_csv("heart.csv")
 
 info = ["Age", "Sex (1: male, 0: female)", "Chest Pain Type (1: typical angina, 2: atypical angina, 3: non-anginal pain, 4: asymptomatic)",
         "Resting Blood Pressure", "Serum Cholestoral (mg/dl)", "Fasting Blood Sugar (mg/dl)", "Resting ECG (0,1,2)",
@@ -46,23 +40,8 @@ for i in range(len(info)):
 
 new_data = pd.DataFrame(features, index=[0])
 
-X = data.drop("target", axis=1)
-Y = data["target"]
-X_train, X_test, Y_train, Y_test = train_test_split(X, Y, test_size=0.20, random_state=0)
-
-max_accuracy = 0
-for x in range(2000):
-  rf = RandomForestClassifier(random_state=x)
-  rf.fit(X_train, Y_train)
-  Y_pred_rf = rf.predict(X_test)
-  curr_accuracy = round(accuracy_score(Y_pred_rf, Y_test)*100,2)
-  if(curr_accuracy > max_accuracy):
-    max_accuracy = curr_accuracy
-    best_x = x
-
-rf = RandomForestClassifier(random_state=best_x)
-rf.fit(X_train, Y_train)
-prediction = rf.predict(new_data)
+model = joblib.load('trained_model.joblib')
+prediction = model.predict(new_data)
 
 st.subheader("Prediction Result:")
 if prediction[0] == 0:
