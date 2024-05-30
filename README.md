@@ -99,17 +99,17 @@ The model considers multiple features related to an individual's health, such as
 
 - Age
 - Sex
-- Cerebral Palsy (CP)
+- Chest pain type (4 values)
 - Resting blood pressure
-- Cholesterol
-- Fasting blood sugar
-- Resting ECG
+- Serum cholesterol in mg/dl
+- Fasting blood sugar > 120 mg/dl
+- Resting electrocardiographic results (values 0,1,2)
 - Thalach (Maximum heart rate achieved)
 - Exang (Excercise induced angina)
-- Oldpeak
-- Slope
-- Coronary artery
-- Thalassemia
+- Oldpeak = ST depression induced by exercise relative to rest
+- The slope of the peak exercise ST segment
+- Number of major vessels (0-3) colored by flouroscopy
+- Thalassemia (0 = normal, 1 = fixed defect, 2 = reversable defect)
 
 ## Dataset
 
@@ -123,6 +123,7 @@ Before using this code, ensure that you have the following prerequisites:
 - **Scikit-learn**: It is a free open source machine learning library for python.
 - **Keras**: It is a deep learning API developed by Google for implementing neural networks.
 - **Joblib**: It can be used to save and load machine learning models.
+- **Streamlit**: It is an open-source Python framework for data scientists and AI/ML engineers to deliver dynamic data apps with only a few lines of code.
 
 ## Getting Started
 
@@ -135,7 +136,11 @@ Before using this code, ensure that you have the following prerequisites:
 
 The code is divided into the following sections:
 
-### I. Importing required libraries
+### 1. Heart_disease_detection.ipynb
+
+In this section the machine learning model is trained and evaluated from the dataset.
+
+#### I. Importing required libraries
 
 - The code begins by importing necessary libraries, including `Numpy`, `Pandas`, `Matplotlib`, `Seaborn`, and `OS`.
 - `%matplotlib inline` is a magic command for Jupyter Notebooks to display plots inline.
@@ -151,7 +156,7 @@ The code is divided into the following sections:
  print(os.listdir())
  warnings.filterwarnings('ignore')
  ```
-### II. Importing and understanding the dataset
+#### II. Importing and understanding the dataset
 
 - The dataset (`heart.csv`) is loaded using pandas.
   
@@ -194,7 +199,7 @@ data["target"].describe()
 data["target"].unique()
 ```
 
-### III. Exploratory Data Analysis (EDA)
+#### III. Exploratory Data Analysis (EDA)
 
 - Percentage of the patients with and without heart problems are displayed by analyzing the target variable.
 
@@ -206,7 +211,7 @@ print("Percentage of patience without heart problems: "+str(round(target_temp[0]
 print("Percentage of patience with heart problems: "+str(round(target_temp[1]*100/303,2)))
 ```
 
-### IV. Train test split
+#### IV. Train test split
 
 - The dataset is split into training and testing sets using `train_test_split`.
 
@@ -217,7 +222,7 @@ Y = data["target"]
 X_train, X_test, Y_train, Y_test = train_test_split(X, Y, test_size=0.20, random_state=0)
 ```
 
-### V. Model fitting
+#### V. Model fitting
 
 - Imported `accuracy_score` from `Scikit-learn` library to get various models performance in the means of accuracy.
 
@@ -330,7 +335,7 @@ score_nn = round(accuracy_score(Y_pred_nn, Y_test)*100,2)
 print("The accuracy score achieved using Neural Network is: "+str(score_nn)+"%")
 ```
 
-### VI. Output final score
+#### VI. Output final score
 
 - Accuracy scores of different models are compared and visualized using scatter plot.
 
@@ -347,7 +352,7 @@ sns.barplot(x=algorithms, y=scores)
 plt.show()
 ```
 
-### VII. Prediction on new data
+#### VII. Prediction on new data
 
 - New data is taken for predicting whether disease is there or not.
 
@@ -375,7 +380,7 @@ else:
   print("Disease")
 ```
 
-### VIII. Save model using Joblib
+#### VIII. Save model using Joblib
 
 - The Random Forest model with highest accuracy is saved using `joblib` and can be downloaded.
 
@@ -385,57 +390,51 @@ joblib.dump(rf, 'trained_model.joblib')
 from google.colab import files
 files.download('trained_model.joblib')
 ```
+### 2. app.py
 
-### IX. Graphical User Interface (GUI)
+In this section the `streamlit` application is developed for machine learning model.
 
-- Necessary packages are installed and imported for creating an interactive widget.
+#### I. Importing required liraries
+
+- The code begins by importing necessary libraries, including `streamlit`, `pandas`, `joblib`, and `numpy`.
 
 ```bash
-!pip install ipywidgets
-!pip install Ipython
-import ipywidgets as widgets
-from IPython.display import display
+import streamlit as st
+import pandas as pd
+import joblib
+import numpy as np
 ```
+#### II. Style and Layout
 
-- An interactive widget is created to take user inputs and provide real-time predictions using the trained model.
+- This section adds custom CSS to style the application. It centers and styles the copyright text.
 
-```bash
-model = joblib.load('trained_model.joblib')
-
-def make_prediction(age, sex, cp, trestbps, chol, fbs, restecg, thalach, exang, oldpeak, slope, ca, thal):
-  input_data = [[age, sex, cp, trestbps, chol, fbs, restecg, thalach, exang, oldpeak, slope, ca, thal]]
-  prediction = model.predict(input_data)
-  if prediction[0] == 1:
-    result_label.value = "Heart Disease Detected"
-  else:
-    result_label.value = "Heart Disease Not Detected"
-
-age_input = widgets.FloatText(description='Age: ')
-sex_input = widgets.IntText(min=0, max=1, description='Sex: ')
-cp_input = widgets.IntText(min=1, max=4, description='Cerebral Palsy(CP): ')
-trestbps_input = widgets.FloatText(description='Resting Blood Pressure: ')
-chol_input = widgets.FloatText(description='Cholestrol: ')
-fbs_input = widgets.IntText(min=0, max=1, description='Fasting Blood SUgar: ')
-restecg_input = widgets.IntText(min=0, max=2, description='Resting ECG: ')
-thalach_input = widgets.FloatText(description='Max Heart Rate: ')
-exang_input = widgets.IntText(min=0, max=1, description='Exercise Induced Angina: ')
-oldpeak_input = widgets.FloatText(description='Oldpeak: ')
-slope_input = widgets.IntText(min=0, max=2, description='Slope: ')
-ca_input = widgets.IntText(min=0, max=3, description='Cardiac Arrest: ')
-thal_input = widgets.IntText(description='Thalassemia: ')
-
-result_label = widgets.Label(value="Prediction: ")
-widgets.interactive_output(
-    make_prediction,
-    {'age':age_input, 'sex': sex_input, 'cp': cp_input, 'trestbps': trestbps_input,
-     'chol': chol_input, 'fbs': fbs_input, 'restecg': restecg_input, 'thalach': thalach_input,
-     'exang': exang_input, 'oldpeak': oldpeak_input, 'slope': slope_input, 'ca': ca_input, 'thal': thal_input}
+ ```bash
+st.markdown(
+    """
+    <style>
+    .copyright {
+        text-align: center;
+        margin-top: 20px;
+        color: #666;
+        font-size: 14px;
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
 )
-
-display(age_input, sex_input, cp_input, trestbps_input, chol_input, fbs_input, restecg_input, thalach_input, exang_input, oldpeak_input, slope_input,
-        ca_input, thal_input)
-display(result_label)
 ```
+
+#### III. Load data
+
+- This loads the dataset `heart.csv` into a pandas DataFrame. Although the data is loaded here, it is not used further in the script.
+
+```bash
+data = pd.read_csv('heart.csv')
+```
+
+#### IV. Application title and description
+
+-
 
 ## Output
 
