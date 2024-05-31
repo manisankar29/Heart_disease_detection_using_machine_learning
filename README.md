@@ -514,7 +514,7 @@ else:
     st.markdown('<div style="color: red; font-size: 46px;">Heart Disease Chances Found!!☹️<div>', unsafe_allow_html=True)
 ```
 
-#### IX> Footer
+#### IX. Footer
 
 - Adds a footer with copyright information.
 
@@ -534,7 +534,7 @@ st.markdown('<div class="copyright">&copy; 2024 mani sankar pasala. All rights r
 
 - An interactive application to take user inputs and provide real-time predictions using the trained model.
 
-
+<img width="959" alt="image" src="https://github.com/manisankar29/Heart_disease_detection_using_machine_learning/assets/138246745/15c6afa6-2cfd-4a79-8ff0-1435b4e99349">
 
 ## Note
 
